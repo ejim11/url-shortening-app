@@ -1,0 +1,89 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.formDiv {
+  border-radius: 1rem;
+  transform: translateY(-50%);
+}
+.form {
+  display: flex;
+
+  background: url("../../assets/bg-shorten-desktop.svg") $color-primary-2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6rem 6rem 4.2rem 6rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+
+  @include respond(phone) {
+    flex-direction: column;
+    padding: 2.5rem;
+    background: url("../../assets/bg-shorten-mobile.svg") $color-primary-2;
+    background-size: contain;
+  }
+
+  & input {
+    width: 50vw;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    outline: none;
+    color: $color-secondary-3;
+    order: 1;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  & button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.8rem;
+    background-color: $color-primary-1;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    cursor: pointer;
+    order: 2;
+    align-self: flex-start;
+
+    @include respond(phone) {
+      align-self: stretch;
+    }
+
+    &:hover {
+      background-color: rgba($color-primary-1, 0.85);
+    }
+  }
+
+  & p {
+    color: rgba(red, 0.7);
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    font-style: italic;
+    order: 3;
+  }
+}
+
+.err {
+  transform: translateY(-100%);
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.errorMsg {
+  transition: all 0.5s ease;
+  transform: translateY(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.errorInput {
+  border: 2px solid rgba(red, 0.7);
+
+  &::placeholder {
+    color: rgba(red, 0.7);
+  }
+}

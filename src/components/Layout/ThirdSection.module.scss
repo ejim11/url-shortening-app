@@ -1,0 +1,38 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.thirdSct {
+  width: 100%;
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../../assets/bg-boost-desktop.svg") $color-primary-2;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond(phone) {
+    background: url("../../assets/bg-boost-mobile.svg") $color-primary-2;
+    background-size: contain;
+    padding: 8rem 1rem;
+    text-align: center;
+  }
+
+  & h2 {
+    font-size: 4rem;
+    color: #fff;
+    margin: 2rem;
+  }
+}
+
+.btn {
+  color: #fff;
+  background-color: $color-primary-1;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1.5rem 3.5rem;
+
+  &:hover {
+    background-color: rgba($color-primary-1, 0.85);
+  }
+}

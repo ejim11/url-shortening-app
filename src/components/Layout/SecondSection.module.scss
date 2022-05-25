@@ -1,0 +1,9 @@
+@import "../../scss/base";
+
+.secondSection {
+  background-color: rgba($color-primary-2, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6rem;
+}

@@ -1,0 +1,162 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+@import "../../scss/animation";
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 3rem 25rem;
+  align-items: center;
+
+  @include respond(bigLaptop) {
+    padding: 3rem 16rem;
+  }
+
+  @include respond(tablet) {
+    padding: 2rem 12rem;
+  }
+
+  @include respond(mini-tablet) {
+    padding: 2rem 6rem;
+  }
+
+  @include respond(phone) {
+    padding: 2.5rem 0;
+    position: relative;
+  }
+
+  &__logo {
+    @include respond(phone) {
+      margin-left: 2rem;
+    }
+  }
+
+  &__navBox {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+      position: absolute;
+      top: 10rem;
+      width: 90%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      padding: 1.5rem 2rem;
+      background-color: $color-primary-2;
+      border-radius: 1rem;
+    }
+  }
+
+  &__nav {
+    width: 30%;
+    margin-left: 2rem;
+
+    @include respond(bigLaptop) {
+      width: 35%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    & ul {
+      display: flex;
+      list-style-type: none;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+
+      @include respond(phone) {
+        flex-direction: column;
+        padding: 2rem 0;
+        border-bottom: 1px solid $color-secondary-1;
+      }
+
+      & li {
+        font-size: 1.6rem;
+        color: $color-secondary-2;
+        cursor: pointer;
+
+        @include respond(phone) {
+          width: 100%;
+          text-align: center;
+          padding: 2rem 0;
+          color: #fff;
+        }
+
+        &:hover {
+          color: $color-secondary-4;
+        }
+      }
+    }
+  }
+
+  &__logBtn {
+    margin-left: auto;
+
+    @include respond(phone) {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0;
+      align-items: center;
+    }
+
+    &-login {
+      margin-right: 2rem;
+      background-color: transparent;
+      color: $color-secondary-2;
+
+      @include respond(phone) {
+        color: #fff;
+        margin-bottom: 1.5rem;
+        margin-right: 0;
+      }
+
+      &:hover {
+        border: 1px solid $color-primary-1;
+        color: $color-primary-1;
+      }
+    }
+
+    &-signup {
+      background-color: $color-primary-1;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        border: 1px solid $color-primary-1;
+        color: $color-primary-1;
+      }
+    }
+  }
+}
+
+.toggler {
+  display: none;
+  fill: $color-secondary-4;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  @include respond(phone) {
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+}
+
+.display {
+  @include respond(phone) {
+    display: flex;
+    // animation: slideMenu 1s ease-in;
+    // -webkit-animation: slideMenu 1s ease-in;
+  }
+}
+.hide {
+  @include respond(phone) {
+    display: none;
+  }
+}

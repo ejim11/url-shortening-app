@@ -1,0 +1,30 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.media {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-self: flex-start;
+
+  @include respond(tablet) {
+    width: 23%;
+  }
+
+  @include respond(phone) {
+    width: 50%;
+    margin: 1rem auto;
+  }
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: #fff;
+    cursor: pointer;
+
+    &:hover {
+      fill: $color-primary-1;
+    }
+  }
+}

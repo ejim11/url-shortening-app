@@ -1,0 +1,9 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.UrlBox {
+  @include respond(phone) {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}

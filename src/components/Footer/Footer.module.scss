@@ -1,0 +1,37 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.footer {
+  background-color: $color-secondary-4;
+  padding: 4rem 14rem;
+  display: flex;
+
+  @include respond(tablet) {
+    padding: 4rem 10rem;
+  }
+
+  @include respond(mini-tablet) {
+    padding: 4rem 5rem;
+  }
+
+  @include respond(phone) {
+    padding: 4rem 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__imgLogo {
+    width: 35%;
+
+    @include respond(bigLaptop) {
+      width: 30%;
+    }
+    @include respond(tablet) {
+      width: 25%;
+    }
+
+    @include respond(phone) {
+      width: auto;
+    }
+  }
+}

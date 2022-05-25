@@ -1,0 +1,52 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.statDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 0 1.5rem 2.5rem 1.5rem;
+  border-radius: 1rem;
+
+  @include respond(phone) {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
+
+  & h3 {
+    font-size: 2.2rem;
+    color: $color-secondary-3;
+  }
+
+  & p {
+    margin: 2rem 0;
+    font-size: 1.65rem;
+  }
+}
+
+.logoDiv {
+  background-color: $color-primary-2;
+  width: 8.5rem;
+  height: 8.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+._1 {
+  margin-top: 5rem;
+
+  @include respond(phone) {
+    margin-top: 10rem;
+  }
+}
+
+._2 {
+  margin-top: 10rem;
+}

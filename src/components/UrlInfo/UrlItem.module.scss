@@ -1,0 +1,66 @@
+@import "../../scss/base";
+@import "../../scss/animation";
+@import "../../scss/mixin";
+
+.item {
+  margin: 1.5rem 0;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  animation: titleAnimation 6s ease;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.5rem 0;
+  }
+
+  &__org {
+    color: $color-secondary-3;
+
+    @include respond(phone) {
+      padding: 1.5rem;
+      border-bottom: 1px solid $color-secondary-1;
+    }
+  }
+
+  &__sht {
+    margin-left: auto;
+    color: $color-primary-1;
+
+    @include respond(phone) {
+      margin-left: 0;
+      padding: 1.5rem;
+    }
+  }
+
+  & button {
+    padding: 0.8rem 2rem;
+    margin-left: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    @include respond(phone) {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+
+    &:hover {
+      background-color: rgba($color-primary-1, 0.8);
+    }
+  }
+}
+
+.copy {
+  background-color: $color-primary-1;
+}
+
+.copied {
+  background-color: $color-primary-2;
+}
